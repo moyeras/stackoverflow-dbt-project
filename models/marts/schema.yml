@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "Date dimension for time-based analysis"
+    columns:
+      - name: date_day
+        description: "The calendar date"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_tag
+    description: "Tag/topic dimension"
+    columns:
+      - name: tag_id
+        description: "Unique identifier for each tag"
+        tests:
+          - unique
+          - not_null
+      - name: tag_name
+        description: "Name of the Stack Overflow tag/topic"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_question_metrics
+    description: "Daily metrics for questions by tag"
+    columns:
+      - name: tag_id
+        description: "Foreign key to dim_tag"
+        tests:
+          - not_null
+      - name: created_date
+        description: "Date the questions were created"
+        tests:
+          - not_null
+      - name: total_questions
+        description: "Number of questions asked"
+        tests:
+          - not_null
+
+  - name: mart_topic_answer_needs
+    description: "Summary of topics with highest need for answers"
+    columns:
+      - name: tag_id
+        description: "Unique identifier for tag"
+        tests:
+          - unique
+          - not_null
+      - name: total_questions
+        description: "Total questions for this tag"
+      - name: unanswered_questions
+        description: "Questions without any answers"
+      - name: answer_rate_pct
+        description: "Percentage of questions that received at least one answer"
+      - name: answer_need_score
+        description: "Composite score indicating need for answers (higher = more need)"
