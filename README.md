@@ -6,9 +6,6 @@
 
 ---
 
-<img width="944" height="860" alt="star schema" src="https://github.com/user-attachments/assets/aed6a7d6-d697-4896-bf41-72904c447194" />
-
-
 ## 📘 Executive Summary
 
 This project analyzes Stack Overflow questions from **2020–2022** to identify which **developer topics have the highest need for answers**.  
@@ -47,6 +44,9 @@ Includes:
 ---
 
 ### 3. Data Model Diagram
+
+<img width="944" height="860" alt="star schema" src="https://github.com/user-attachments/assets/aed6a7d6-d697-4896-bf41-72904c447194" />
+
 The star schema includes:
 
 - **Join Keys**
