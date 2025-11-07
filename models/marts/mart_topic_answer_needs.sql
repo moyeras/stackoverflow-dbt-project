@@ -1,4 +1,3 @@
--- Mart: Topic-level summary for "topics with highest need for answers"
 WITH question_tags AS (
     SELECT * FROM {{ ref('int_question_tags') }}
 ),
@@ -11,30 +10,30 @@ SELECT
     qt.tag_id,
     qt.tag_name,
     
-    -- Overall metrics
+    
     COUNT(DISTINCT q.question_id) AS total_questions,
     SUM(CASE WHEN q.is_unanswered THEN 1 ELSE 0 END) AS unanswered_questions,
     SUM(CASE WHEN q.has_accepted_answer THEN 1 ELSE 0 END) AS questions_with_accepted_answer,
     SUM(q.answer_count) AS total_answers,
     
-    -- Averages
+  
     AVG(q.answer_count) AS avg_answers_per_question,
     AVG(q.view_count) AS avg_views,
     AVG(q.score) AS avg_question_score,
     
-    -- Key indicator: Answer rate
+   
     SAFE_DIVIDE(
         COUNT(DISTINCT q.question_id) - SUM(CASE WHEN q.is_unanswered THEN 1 ELSE 0 END),
         COUNT(DISTINCT q.question_id)
     ) * 100 AS answer_rate_pct,
     
-    -- Key indicator: Accepted answer rate
+  
     SAFE_DIVIDE(
         SUM(CASE WHEN q.has_accepted_answer THEN 1 ELSE 0 END),
         COUNT(DISTINCT q.question_id)
     ) * 100 AS accepted_answer_rate_pct,
     
-    -- "Need score" - higher = more need for answers
+   
     SUM(CASE WHEN q.is_unanswered THEN 1 ELSE 0 END) + 
     (SAFE_DIVIDE(
         SUM(CASE WHEN q.is_unanswered THEN 1 ELSE 0 END), 
@@ -44,5 +43,6 @@ SELECT
 FROM questions q
 INNER JOIN question_tags qt ON q.question_id = qt.question_id
 GROUP BY qt.tag_id, qt.tag_name
-HAVING COUNT(DISTINCT q.question_id) >= 100  -- Only tags with significant activity
+HAVING COUNT(DISTINCT q.question_id) >= 100  
+
 ORDER BY answer_need_score DESC
