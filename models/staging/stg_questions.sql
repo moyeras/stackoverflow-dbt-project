@@ -1,4 +1,3 @@
--- Staging model: Clean and standardize raw questions data
 WITH source AS (
     SELECT *
     FROM `bigquery-public-data.stackoverflow.posts_questions`
@@ -22,7 +21,7 @@ SELECT
     view_count,
     accepted_answer_id,
     
-    -- Derived fields
+    
     CASE 
         WHEN answer_count = 0 THEN TRUE 
         ELSE FALSE 
@@ -36,4 +35,5 @@ SELECT
     DATE(creation_date) AS created_date
 
 FROM source
+
 WHERE tags IS NOT NULL  -- Only questions with tags
