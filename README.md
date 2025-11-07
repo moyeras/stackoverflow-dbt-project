@@ -31,7 +31,7 @@ Includes:
 
 ### 2. BigQuery Dataset (Public Access)
 **Project ID:** `stackoverflow-analysis-477422`
-**Project Link:** https://console.cloud.google.com/bigquery?project=stackoverflow-analysis-477422
+- **Project Link:** https://console.cloud.google.com/bigquery?project=stackoverflow-analysis-477422
 
 **Datasets:**
 | Dataset | Description |
