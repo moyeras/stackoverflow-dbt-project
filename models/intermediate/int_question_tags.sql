@@ -12,5 +12,5 @@ SELECT
     t.tag_name
 FROM questions q,
 UNNEST(SPLIT(q.tags, '|')) AS tag_str
-
 INNER JOIN tags t ON t.tag_name = tag_str
+
