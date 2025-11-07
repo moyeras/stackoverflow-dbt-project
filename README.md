@@ -85,6 +85,12 @@ Interactive visualization of the findings:
 
 ---
 
+### 5. [Google Doc](https://docs.google.com/document/d/1EQzPHI7S3i59dZsxk68o-b5VoZGGb31Eou6XGdC5xao/edit?usp=sharing)
+
+Full project documentation and detailed explanations.
+
+---
+
 ## Technical Implementation
 
 ### Data Architecture Overview
