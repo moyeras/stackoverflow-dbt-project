@@ -1,4 +1,3 @@
--- Dimension: Date dimension for time-based analysis
 WITH date_spine AS (
     SELECT DISTINCT 
         created_date AS date_day
@@ -15,7 +14,8 @@ SELECT
     FORMAT_DATE('%B', date_day) AS month_name,
     FORMAT_DATE('%A', date_day) AS day_name,
     
-    -- Useful flags
+    
     CASE WHEN EXTRACT(DAYOFWEEK FROM date_day) IN (1, 7) THEN TRUE ELSE FALSE END AS is_weekend
     
+
 FROM date_spine
