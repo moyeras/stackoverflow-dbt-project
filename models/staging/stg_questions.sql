@@ -1,8 +1,8 @@
 WITH source AS (
     SELECT *
     FROM `bigquery-public-data.stackoverflow.posts_questions`
-    WHERE creation_date >= '2020-01-01'  -- Limit data for performance
-      AND creation_date < '2023-01-01'   -- 3 years of data
+    WHERE creation_date >= '2020-01-01'  
+      AND creation_date < '2023-01-01'   
 )
 
 SELECT
@@ -37,3 +37,4 @@ SELECT
 FROM source
 
 WHERE tags IS NOT NULL  -- Only questions with tags
+
