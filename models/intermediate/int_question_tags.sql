@@ -1,4 +1,3 @@
--- Intermediate: Bridge table linking questions to tags
 WITH questions AS (
     SELECT * FROM {{ ref('stg_questions') }}
 ),
@@ -13,4 +12,5 @@ SELECT
     t.tag_name
 FROM questions q,
 UNNEST(SPLIT(q.tags, '|')) AS tag_str
+
 INNER JOIN tags t ON t.tag_name = tag_str
