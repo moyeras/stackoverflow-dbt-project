@@ -1,4 +1,4 @@
-# 🧠 Stack Overflow Analysis — Insighta Assessment
+# Stack Overflow Analysis — Insighta Assessment
 
 **Candidate:** Yusuf Songur  
 **Email:** [yusufsongur31@gmail.com](mailto:yusufsongur31@gmail.com)  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📘 Executive Summary
+## Executive Summary
 
 This project analyzes Stack Overflow questions from **2020–2022** to identify which **developer topics have the highest need for answers**.  
 Using **dimensional modeling** and **modern data engineering practices**, a full data pipeline was built to process over **23 million questions**, highlighting under-served areas in the developer community.
@@ -17,7 +17,7 @@ Using **dimensional modeling** and **modern data engineering practices**, a full
 
 ---
 
-## 🚀 Deliverables
+## Deliverables
 
 ### 1. [dbt Project Repository](https://github.com/moyeras/stackoverflow-dbt-project)
 Includes:
@@ -78,13 +78,13 @@ The star schema includes:
 ### 4. [Looker Studio Dashboard](https://lookerstudio.google.com/reporting/1c4ad81e-1d90-40e9-aa53-55b258f3983f)
 
 Interactive visualization of the findings:
-- 📊 Top 20 topics ranked by *Answer Need Score*  
-- 📈 Bar chart of unanswered question counts  
-- ⚙️ Scatter plot showing activity vs. answer rate  
+- Top 20 topics ranked by *Answer Need Score*  
+- Bar chart of unanswered question counts  
+- Scatter plot showing activity vs. answer rate  
 
 ---
 
-## 🏗️ Technical Implementation
+## Technical Implementation
 
 ### Data Architecture Overview
 
@@ -112,18 +112,18 @@ Interactive visualization of the findings:
 
 ---
 
-### 🧪 Data Quality
+### Data Quality
 
 Implemented **dbt tests** for:
-- ✅ Uniqueness on primary keys  
-- ✅ Not-null constraints on critical fields  
-- ✅ Referential integrity across fact/dimension tables  
+- Uniqueness on primary keys  
+- Not-null constraints on critical fields  
+- Referential integrity across fact/dimension tables  
 
 All tests **passed successfully**.
 
 ---
 
-## 📊 Key Findings
+## Key Findings
 
 | Topic | Total Questions | Unanswered | Answer Rate |
 |--------|----------------|-------------|--------------|
@@ -138,7 +138,7 @@ All tests **passed successfully**.
 
 ---
 
-## 🧰 Tools & Technologies
+## Tools & Technologies
 
 | Category | Tools |
 |-----------|-------|
@@ -150,7 +150,7 @@ All tests **passed successfully**.
 
 ---
 
-## ⚙️ Assumptions & Limitations
+## Assumptions & Limitations
 
 **Assumptions**
 - `answer_count = 0` → question considered unanswered  
@@ -165,19 +165,19 @@ All tests **passed successfully**.
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 If extended further:
-- ⏱️ Add time-to-answer metric  
-- ⭐ Score answer quality (votes & acceptance)  
-- 👤 Add user dimension for contributor analysis  
-- 🧱 Implement SCD for tag popularity over time  
-- ⚡ Build incremental models for production use  
-- 🧩 Enhance data lineage and testing coverage  
+- Add time-to-answer metric  
+- Score answer quality (votes & acceptance)  
+- Add user dimension for contributor analysis  
+- Implement SCD for tag popularity over time  
+- Build incremental models for production use  
+- Enhance data lineage and testing coverage  
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 This project demonstrates end-to-end **data engineering and analytics capabilities** including:
 - Robust **dimensional modeling** and **star schema design**  
@@ -190,10 +190,10 @@ This project demonstrates end-to-end **data engineering and analytics capabiliti
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Yusuf Songur**  
-📧 [yusufsongur31@gmail.com](mailto:yusufsongur31@gmail.com)  
-🔗 [GitHub Repository](https://github.com/moyeras/stackoverflow-dbt-project)
+[yusufsongur31@gmail.com](mailto:yusufsongur31@gmail.com)  
+[GitHub Repository](https://github.com/moyeras/stackoverflow-dbt-project)
 
 ---
