@@ -35,7 +35,7 @@ SELECT
     DATE(creation_date) AS created_date
 
 FROM source
-
 WHERE tags IS NOT NULL  
+
 
 
