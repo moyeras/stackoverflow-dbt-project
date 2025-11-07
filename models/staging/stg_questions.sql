@@ -36,5 +36,6 @@ SELECT
 
 FROM source
 
-WHERE tags IS NOT NULL  -- Only questions with tags
+WHERE tags IS NOT NULL  
+
 
