@@ -46,5 +46,5 @@ INNER JOIN question_tags qt ON q.question_id = qt.question_id
 GROUP BY 
     qt.tag_id,
     qt.tag_name,
-
     DATE(q.creation_date)
+
