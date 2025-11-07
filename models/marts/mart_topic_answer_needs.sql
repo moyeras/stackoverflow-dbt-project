@@ -44,5 +44,5 @@ FROM questions q
 INNER JOIN question_tags qt ON q.question_id = qt.question_id
 GROUP BY qt.tag_id, qt.tag_name
 HAVING COUNT(DISTINCT q.question_id) >= 100  
-
 ORDER BY answer_need_score DESC
+
