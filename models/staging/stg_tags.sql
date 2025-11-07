@@ -8,5 +8,5 @@ SELECT DISTINCT
 FROM source,
 UNNEST(SPLIT(tags, '|')) AS tag
 WHERE tag IS NOT NULL 
-
   AND tag != ''
+
